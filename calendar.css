@@ -1,0 +1,139 @@
+﻿    .calendar {
+        width: 320px;
+        font-weight: bold;
+        color: #777;
+        font-size: 11px;
+        font-family: helvetica, arial, sans-serif;
+    }
+    .navigation:hover {
+        cursor: pointer;
+    }
+    .navigation-forward {
+        margin-top: 10px;
+        margin-right: 10px;
+        float: right;
+    }
+    .navigation-back {
+        margin-top: 10px;
+        margin-left: 10px;
+        float: left;
+    }
+    .month-header {
+        border-top: solid 1px black;
+        border-right: solid 1px black;
+        border-left: solid 1px black;
+        border-radius: 5px 5px 0 0;
+        height: 35px;
+        font-size: 18px;
+        line-height: 35px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .calendar-cell {
+        float: left;
+        vertical-align: middle;
+        text-align: center;
+        width: 45px;
+        height: 45px;
+    }
+    .day-names {
+        background-color: #e6e6e6;
+        border-right: solid 1px black;
+        border-left: solid 1px black;
+        line-height: 25px;
+        height: 25px;
+        overflow: hidden;           
+    }
+    .day-names:hover {
+        cursor: default;
+    }
+    .calendar-days {
+        border-bottom: solid 1px black;
+        border-right: solid 1px black;
+        border-left: solid 1px black;
+        border-radius: 0 0 5px 5px;
+    }
+    .calendar-day:hover {
+        cursor: pointer;
+    }
+    .days-row {
+        margin-left: 2px;
+        float: left;
+        clear: both;
+    }
+    .calendar-day {
+        margin-top: 5px;
+        margin-left: 5px;
+        float: left;
+        width: 30px;
+        height: 30px;
+        border: solid 2px #e6e6e6;
+        border-radius: 17px;
+        line-height: 31px;
+        font-size: 14px;
+    }
+    .calendar-day:hover {
+        border-color: #00A5FA;
+        color: #777;
+    }
+    .calendar-day.selected:hover {
+        border-color: #FFF;
+        color: white;
+    }
+    .obscure-day {
+        background-color: #e6e6e6;
+        color: #e6e6e6;
+    }
+    .obscure-text {
+        color: #e6e6e6;
+    }
+    .current-day {
+        border-color: #777;
+    }
+    .left-end{
+        
+    }
+    .right-end{
+        
+    }
+    .selected {
+        border-color: #00A5FA;
+        color: white;
+        background-color: #00A5FA;
+    }
+    .calendar-clear{
+        clear: both;
+        margin-bottom: 3px;
+    }
+    .calendar ::-moz-selection{
+        background-color:Transparent;
+    }
+
+    .calendar ::selection {
+        background-color:Transparent;
+    }
+
+    .selecting {
+        border-color: #00A5FA;
+        background-color: white;
+        color: #777;
+    }
+    .deselecting {
+        border-color: white;
+        background-color: #00A5FA;
+        color: white;
+    }
+
+    
+    .left-end{
+        
+    }
+    .right-end{
+        
+    }
+    .selected-left {
+        
+    }
+    .selected-right {
+        
+    }

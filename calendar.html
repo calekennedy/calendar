@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Calendar Example</title>
+    <!-- the calendar is dependent on the following open source libraries -->
+    <script id="dependency-jquery" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script id="dependency-moment" src="https://raw.github.com/timrwood/moment/2.0.0/min/moment.min.js"></script>
+    
+    <!-- credit goes to http://supercerebral.com/glyphicons-to-halflings-sprite/ -->
+    <link id="glyphicons" rel="stylesheet" type="text/css" href="glyphicon.css" />
+
+    <script src="calendar.js" type="text/javascript"></script>
+    <link id="calendarCss" rel="stylesheet" type="text/css" href="calendar.css" />
+</head>
+
+<body>
+    <div id="calendar">
+        this is where the calendar goes
+    </div>
+
+    <br/>
+
+    <div id="shameless-plug">
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            //Any dates you would like to display as preselected on the calendar, the array must be in this format.
+            var preselectedDates = new Array({ day: 26, month: 4, year: 2013 }, { day: 1, month: 4, year: 2013 }, { day: 15, month: 4, year: 2013 });
+
+            //these are the options you may specify for the calendar.
+            var options = {
+                month: 4, //defaults to current month
+                year: 2013, // defaults to current year
+                selectedDates: preselectedDates //defaults to empty array
+            };
+
+            //The page element that you would like to turn into a calendar.
+            var element = $("#calendar");
+
+            //Create the calendar
+            element.calendar(options);
+
+            //Get the json array of selected date objects from the calendar whenever they change.
+            element.on('change', function (event, selectedDates) {
+                preselectedDates = selectedDates;
+                for (var date in preselectedDates) {
+                    console.log(preselectedDates[date]);
+                }
+            });
+
+            var appendShamelessPlug = setTimeout(function () {
+                $("#shameless-plug").hide()
+                    .append('<p>Thanks for checking out my date picker.</p><p>Please feel free to view the rest of my projects at <a href="http://calekennedy.com">calekennedy.com</a> and my employer at <a href="http://mtmrecognition.com">mtmrecognition.com</a></p><p>Also, I dont take any credit for <a href="http://jquery.org">jQuery</a>, <a href="http://momentjs.com/">Moment.js</a>, or <a href="http://glyphicons.com/">GLYPHICONS</a>. Please use these components in agreement with their licensing. </p>')
+                    .fadeIn("slow");
+            }, 1000 * 10)
+        });
+    </script>
+</body>
+</html>
