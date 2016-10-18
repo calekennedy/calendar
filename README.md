@@ -1,3 +1,5 @@
+# This project is dead and has been dead for a while
+
 calendar
 ========
 
